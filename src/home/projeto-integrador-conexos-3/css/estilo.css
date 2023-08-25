@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    /* garante que o elemento ocupa no maximo o espaço definido no width */
+}
+
+/* HEADER */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+header {
+    background-color: #4CAF50;
+} 
+
+header ul {
+    margin: 20;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+
+header ul li {
+    display: inline-table;
+    padding: 10px 15px; 
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #FDFDFD;
+}
+
+button.btn-success {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+} 
+
+/* PLANOS */ 
+
+main h2 {
+    color: #4CAF50;
+}
+
+h5.card-title {
+    color: #4CAF50;
+}
+
+p.card-text {
+    text-align: start;
+}
+
+main p.valor {
+    text-align: center;
+    font-size: 30px;
+    color: #4CAF50;
+    line-height: 39.57px;
+    font-weight: bold;
+}
+
+.card-body a {
+    background-color: #4CAF50;
+    color: #FFF;
+    font-size: 15px;
+    padding: 6px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    text-align: center;
+}
+
+/* STATUS SOLICITAÇÃO */
+.solicitacao-1 {
+    padding: 100px 0;
+}
+
+.solicitacao-1 h2{
+text-align: right;
+font-size: 42px;
+padding: 0 0 30px;
+color: #4CAF50;
+font-weight: bold; 
+}
+
+.visita {
+text-align: right;
+width: 100%;
+font-size: 23px;
+}
+
+.button a{
+    text-align: right ;
+    border-radius: 50px;
+    background-color: #4CAF50;
+    padding: 6px 35px;
+}
+/* PÁGINA DOS PLANOS */
+
+.info-planos {
+    padding: 0px 80px;
+}
+
+.info-planos h3 {
+    color: #4CAF50;
+}
+
+p.text-left {
+    color: #4CAF50;
+    font-size: 25px;
+    text-align: left;
+    font-weight: bold; 
+}
+
+form .Titulo-form-plano {
+    display: flex;
+    justify-content: center;
+    color: #4CAF50;
+}
+
+.form-container {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+.form-select {
+    font-size: small;
+}
+.card-text{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+.btn-primary {
+    background-color: #388E3c;
+ }
+ .planos-main {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+ }
+
+/*Status de solicitaçoes*/
+
+.solicitaçao {
+    padding: 30px 70px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.solicitaçao h2 {
+    color: #4CAF50;
+}
+
+
+.card-soli p {
+    width: 100%;
+    border: 1px solid #212121;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.card-soli a {
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border: 1px solid #4CAF50;
+    padding: 5px 15px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.card-soli a:hover {
+    background-color: #388E3c;
+    border-color: #388E3c;
+    cursor: pointer;
+}
+
+
+
+
+/* FOOTER */
+footer {
+    background-color: #4CAF50;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+footer .container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .col p {
+    font-size: small;
+    text-align: left;
+    text-decoration: none;
+    font-weight: lighter;
+    padding: -50px -100px;
+}
+
+footer ul li a,
+footer ul li button.btn-success {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #FFF;
+}
+
+footer ul li {
+    text-decoration: none;
+    display: table-row;
+}
+
+footer .row {
+    margin: 0px 90px;
+}
+
+footer .copyright {
+    text-align: center;
+    border-top: 1.5px solid #fff;
+    padding: 10px; 
+    font-size: 12px;
+} 
+form .Titulo-form-plano {
+    display: flex;
+    justify-content: center;
+    color: #4CAF50;
+}
+
+.form-container {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+.form-select {
+    font-size: small;
+}
+.card-text{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
