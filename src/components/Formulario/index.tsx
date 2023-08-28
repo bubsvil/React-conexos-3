@@ -1,5 +1,4 @@
-import Button from "../Button";
-<<<<<<< HEAD
+import Button from "../Button_detalhes";
 import { Form, Container } from "./style";
 import { useState, FormEventHandler } from "react";
 
@@ -34,31 +33,10 @@ export default function Formulario() {
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
           />
-=======
-import FormField from "../FormField";
-import { Form, Container } from "./style";
-
-export default function Formulario() {
-  return (
-    <>
-      <Container>
-        <Form>
-          <FormField
-            label="código de acesso"
-            name="codigo_acesso"
-            type="text"
-          />
-
-          <FormField label="Senha" name="senha" type="password" />
->>>>>>> a970226f7f46316c01aac4fe6431140fdc665f18
 
           <Button text="entrar" />
         </Form>
       </Container>
     </>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a970226f7f46316c01aac4fe6431140fdc665f18

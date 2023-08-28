@@ -16,8 +16,4 @@ export const Container = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-<<<<<<< HEAD
 `;
-=======
-`;
->>>>>>> a970226f7f46316c01aac4fe6431140fdc665f18

@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import {createGlobalStyle} from "styled-components";
-
-export const GlobalStyle = createGlobalStyle`
-
-*{
-    box-sizing: border-box;
-}
-
-body{
-    padding: 0;
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-}
-
-`
-=======
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
@@ -38,4 +21,3 @@ export const GlobalStyle = createGlobalStyle`
         justify-content: center;
     }
 `;
->>>>>>> a970226f7f46316c01aac4fe6431140fdc665f18

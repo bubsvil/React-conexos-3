@@ -18,7 +18,6 @@
 //   }
 
 
-import Button from "../Button";
 import { Form } from "./style"
 
 export default function Formulario_pedido(){
