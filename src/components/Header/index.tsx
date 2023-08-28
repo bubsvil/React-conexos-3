@@ -12,10 +12,10 @@ export default function Header() {
           <Menu>
             <ul>
               <li>
-                <Link to="/">Inicio</Link>
+                <Link to="/login">Inicio</Link>
               </li>
               <li>
-                <Link to="/servicos">Serviços</Link>
+                <Link to="/servico">Serviços</Link>
               </li>
               <li>
                 <Link to="/relatorios">Relatórios</Link>

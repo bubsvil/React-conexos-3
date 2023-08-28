@@ -18,7 +18,9 @@
 //   }
 
 
-import { Form } from "./style"
+import { Link } from "react-router-dom";
+import { Form } from "./style";
+import Button from "../Button_detalhes";
 
 export default function Formulario_pedido(){
 
@@ -55,5 +57,19 @@ export default function Formulario_pedido(){
         disabled
         />
         </Form>
+    <div className="container_actions">
+        <div className="button_voltar">
+             <Link to="/detalhes">
+             <Button text="teste" />
+            </Link>
+        </div>
+
+        <div className="button_atender">
+            <Link to="/detalhes">
+            <Button text="teste" />
+            </Link>
+        </div>
+        {/* fazer display flex, space-beetween, flex direction*/}
+    </div>
     </>);
-}
+    }
