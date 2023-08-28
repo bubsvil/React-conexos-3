@@ -15,8 +15,4 @@ export default function FormField({ label, name, type }: FieldProps) {
       </Field>
     </>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a970226f7f46316c01aac4fe6431140fdc665f18

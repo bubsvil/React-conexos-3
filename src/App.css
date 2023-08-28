@@ -11,10 +11,6 @@
   will-change: filter;
   transition: filter 300ms;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> a970226f7f46316c01aac4fe6431140fdc665f18
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }

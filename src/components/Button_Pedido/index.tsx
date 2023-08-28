@@ -1,4 +1,4 @@
-import { ButtonStyled } from "./style";
+import { ButtonStyled } from "./styled";
 
 interface ButtonProps {
   text: string;
@@ -6,8 +6,4 @@ interface ButtonProps {
 
 export default function Button({ text }: ButtonProps) {
   return <ButtonStyled>{text}</ButtonStyled>;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a970226f7f46316c01aac4fe6431140fdc665f18

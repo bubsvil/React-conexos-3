@@ -17,8 +17,4 @@ export const Container = styled.div`
   width: 1200px;
   max-width: 100%;
   margin: 0 auto;
-<<<<<<< HEAD
 `;
-=======
-`;
->>>>>>> a970226f7f46316c01aac4fe6431140fdc665f18
