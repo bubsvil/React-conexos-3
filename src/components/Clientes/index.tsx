@@ -38,7 +38,7 @@ export default function Painel() {
               <td>{colunm.data}</td>
               <td>{colunm.status}</td>
               <td>
-                <Link to="/detalhes">
+                <Link to="/detalhe_servico">
                   <Button_detalhes text="ver detalhes" />
                 </Link>
               </td>
