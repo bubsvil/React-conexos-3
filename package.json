@@ -10,12 +10,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "bootstrap": "^5.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.2",
     "reactstrap": "^9.2.0",
     "styled-components": "^6.0.4"
+=======
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.1",
+    "styled-components": "^6.0.5"
+>>>>>>> a970226f7f46316c01aac4fe6431140fdc665f18
   },
   "devDependencies": {
     "@types/react": "^18.2.14",

@@ -10,4 +10,8 @@ export const Field = styled.form`
     margin: 5px 0 15px;
     padding: 7px;
   }
+<<<<<<< HEAD
 `;
+=======
+`;
+>>>>>>> a970226f7f46316c01aac4fe6431140fdc665f18

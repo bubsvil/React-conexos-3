@@ -14,4 +14,8 @@ export const Container = styled.div`
   p {
     font-size: 22px;
   }
+<<<<<<< HEAD
 `;
+=======
+`;
+>>>>>>> a970226f7f46316c01aac4fe6431140fdc665f18

@@ -9,4 +9,8 @@ export const ButtonStyled = styled.button`
   border-radius: 5px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
+<<<<<<< HEAD
 `;
+=======
+`;
+>>>>>>> a970226f7f46316c01aac4fe6431140fdc665f18
