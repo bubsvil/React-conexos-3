@@ -1,19 +1,17 @@
 import Footer from "../../components/Footer";
-import Formulario_pedido from "../../components/Formulario_pedido";
-
 import Header from "../../components/Header";
 import TextoPrincipal from "../../components/TextoPrincipal";
 
-export default function Detalhes_Servico() {
+export default function Relatorios() {
     return (
       <>
         <Header />
         <main className="flex">
           <TextoPrincipal
-            titulo="Pedido #1283742"
-            descricao="Área exclusiva para funcionários"
+            titulo="Relatorio"
+            descricao=""
           />
-          <Formulario_pedido/>
+          
         </main>
         <Footer />
       </>

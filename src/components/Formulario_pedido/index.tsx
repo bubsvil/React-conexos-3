@@ -10,17 +10,17 @@
 //     return (
 //       <>
 //         <Form>
-//           <label>{label}</label>
+//          <label>{label}</label>
 //           <input type={type} value={value} disabled/>
 //           </Form>
 //       </>
 //     );
 //   }
 
-
+import { ContainerActions, ButtonVoltar, ButtonAtender } from './style';
 import { Link } from "react-router-dom";
 import { Form } from "./style";
-import Button from "../Button_detalhes";
+import Button from '../Button_detalhes';
 
 export default function Formulario_pedido(){
 
@@ -57,19 +57,20 @@ export default function Formulario_pedido(){
         disabled
         />
         </Form>
-    <div className="container_actions">
-        <div className="button_voltar">
+    <ContainerActions>
+    <ButtonVoltar>
              <Link to="/detalhes">
              <Button text="teste" />
             </Link>
-        </div>
+    </ButtonVoltar>
 
-        <div className="button_atender">
+    <ButtonAtender>
             <Link to="/detalhes">
             <Button text="teste" />
             </Link>
-        </div>
+    </ButtonAtender>
+        </ContainerActions>
         {/* fazer display flex, space-beetween, flex direction*/}
-    </div>
     </>);
     }
+

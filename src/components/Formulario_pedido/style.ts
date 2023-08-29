@@ -8,13 +8,16 @@ export const Form  = styled.form`
     
 `;
 
-export const button_voltar = styled.button`
+export const ButtonVoltar = styled.div`
 background-color: grey;
-color: grey;
-padding: 8px 18px;
-margin: 15px 0 0;
-border: 2px solid #556ff5;
-border-radius: 10px;
-font-family: "Raleway", sans-serif;
-font-weight: 700;
+color: black;
+`;
+export const ButtonAtender = styled.div `
+color: green;
+background-color: blueviolet;
+`
+
+export const ContainerActions = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
