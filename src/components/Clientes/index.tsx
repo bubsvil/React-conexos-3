@@ -1,5 +1,6 @@
 
 import Button_detalhes from "../Button_detalhes";
+import Button from "../Button_Pedido";
 import { Link } from "react-router-dom"
 import { TituloCliente, ClienteStyled, Div } from "./style";
 import ButtonModal from "../ButtonModal";
@@ -46,11 +47,6 @@ export default function Painel() {
                 <Link to="/detalhe_servico">
                   <Button_detalhes text="ver detalhes" />
                 </Link>
-              </td>
-              <td>
-                <Div>
-                  <ButtonModal text="atender solicitação" />
-                </Div>
               </td>
 
             </tr>
