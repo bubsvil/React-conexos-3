@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
-  background-color: #556ff5;
+  background-color: #79B07A;
 `;
 
 export const Container = styled.div`
@@ -12,6 +12,10 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   
+  img {
+    width: 150px;
+    height: 50px; 
+  }
 `;
 
 
@@ -27,7 +31,7 @@ export const Menu = styled.nav`
     li {
       padding: 10px;
       a:any-link {
-        color: #ffff;
+        color: black;
         text-decoration: none;
       }
     }

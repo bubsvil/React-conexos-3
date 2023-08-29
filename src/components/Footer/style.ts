@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
 export const FooterStyled = styled.footer`
-  background-color: #556ff5;
+  background-color: #79B07A;
 
   p {
-    color: #fff;
+    color: black;
     padding: 10px 30px;
+  } 
+
+  img {
+    width: 150px;
+    height: 50px; 
   }
 `;
 

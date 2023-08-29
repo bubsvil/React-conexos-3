@@ -1,4 +1,4 @@
-import logoConexos from "../../assets/logo-conexos-white.png";
+import logoConexos from "../../assets/conexos-logo-black.svg";
 import { HeaderStyled, Container, Menu } from "./style";
 import { Link } from "react-router-dom";
 
