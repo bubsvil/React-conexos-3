@@ -48,7 +48,11 @@ export default function Painel() {
                   <Button_detalhes text="ver detalhes" />
                 </Link>
               </td>
-
+                <Div>
+                    <td>
+                      <ButtonModal text="atender solicitação" />
+                    </td>
+                  </Div>
             </tr>
           </tbody>
         ))}
