@@ -1,7 +1,8 @@
 
 import Button_detalhes from "../Button_detalhes";
 import { Link } from "react-router-dom"
-import { ClienteStyled } from "./style";
+import { TituloCliente, ClienteStyled, Div } from "./style";
+import ButtonModal from "../ButtonModal";
 
 function funcionarios(
   id: string,
@@ -14,22 +15,27 @@ function funcionarios(
 }
 
 const colunm = [
-  funcionarios('#7767631', 'Nicollas', 'Plano Ouro - Instalação', '10-08-2024', 'Aguardando agendamento'),
-  funcionarios('#7767631', 'Rodrigo', 'Plano Prata - Instalação', '09-10-2023', 'Aguardando agendamento'),
-  funcionarios('#7767631', 'Nicollas', 'Plano Ouro - Instalação', '22-02-2024', 'Aguardando agendamento'),
-  funcionarios('#7767631', 'Rodrigo', 'Plano Prata - Instalação', '19-12-2023', 'Aguardando agendamento')
+  funcionarios('#7767631', 'Patrick', 'Plano Ouro - Instalação', '10-08-2024', 'Aguardando agendamento'),
+  funcionarios('#7767631', 'Rafaela', 'Plano Prata - Instalação', '09-10-2023', 'Aguardando agendamento'),
+  funcionarios('#7767631', 'Patrick', 'Plano Ouro - Instalação', '22-02-2024', 'Aguardando agendamento'),
+  funcionarios('#7767631', 'Rafaela', 'Plano Prata - Instalação', '19-12-2023', 'Aguardando agendamento')
 ];
-
-
 
 export default function Painel() {
   return (
     <>
+<TituloCliente> 
+  <h4>Código de acesso</h4>
+  <h4>Nome do cliente</h4>
+  <h4>Serviço solicitado</h4>
+  <h4>Data da contratação</h4>
+  <h4>Status</h4>
+</TituloCliente>
+
       <ClienteStyled>
 
-
         {colunm.map((colunm) => (
-          <tbody key={colunm.id}>
+          <tbody key={colunm.id}> 
             <tr>
               <td>{colunm.id}</td>
               <td>{colunm.nome}</td>
@@ -40,6 +46,11 @@ export default function Painel() {
                 <Link to="/detalhe_servico">
                   <Button_detalhes text="ver detalhes" />
                 </Link>
+              </td>
+              <td>
+                <Div>
+                  <ButtonModal text="atender solicitação" />
+                </Div>
               </td>
 
             </tr>

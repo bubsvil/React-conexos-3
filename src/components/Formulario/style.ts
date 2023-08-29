@@ -9,7 +9,19 @@ export const Form = styled.form`
   border-radius: 15px;
 
   input {
-    width: 100%;
+    width: 100%;  
+    display: flex;
+    margin-bottom: 15px;
+  } 
+
+  label { 
+    font-weight: bold; 
+  } 
+
+  button { 
+    width: 100%; 
+    color: #276328; 
+    border: 2px solid #276328;
   }
 `;
 

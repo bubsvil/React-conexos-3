@@ -19,20 +19,24 @@
 
 
 import { Link } from "react-router-dom";
-import { Form } from "./style";
-import Button from "../Button_detalhes";
+import { Form, Container, Div } from "./style";    
+import Button from "../Button_detalhes";  
+import ButtonModal from "../ButtonModal";
+
 
 export default function Formulario_pedido(){
 
-    return(<>
-        <Form>
+    return(<> 
+
+    <Container>
+        <Form> 
         <label>Nome Cliente</label>
         <input
         type="text"
         value="Joao"
         disabled
         />
-        <label>servico</label>
+        <label>Servico</label>
         <input
         type="text"
         value="Plano 1 - Instalação"
@@ -55,21 +59,20 @@ export default function Formulario_pedido(){
         type="text"
         value="Aguardando agendamento"
         disabled
-        />
-        </Form>
-    <div className="container_actions">
-        <div className="button_voltar">
-             <Link to="/detalhes">
-             <Button text="teste" />
-            </Link>
-        </div>
+        /> 
 
-        <div className="button_atender">
-            <Link to="/detalhes">
-            <Button text="teste" />
-            </Link>
-        </div>
-        {/* fazer display flex, space-beetween, flex direction*/}
-    </div>
+<div>
+         <Link to="/detalhes">
+            <Button text="voltar" />
+          </Link> 
+
+          <Div>
+          <ButtonModal text="atender solicitação" />
+          </Div>
+</div>
+
+    </Form> 
+    </Container> 
+   
     </>);
     }

@@ -1,4 +1,4 @@
-import logoConexos from "../../assets/logo-conexos-white.png";
+import logoConexos from "../../assets/conexos-logo-black.svg";
 import { Container, FooterStyled } from "./style";
 
 export default function Footer() {
