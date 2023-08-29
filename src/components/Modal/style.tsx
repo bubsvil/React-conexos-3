@@ -19,4 +19,13 @@ export const StyledModal = styled.div`
   border-radius: 10px;
   height: 300px;
   width: 300px;
+  text-align: center;
+
+  button {
+    position: absolute;
+    bottom: 30px; /* Espaçamento a partir do fundo do modal */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o botão horizontalmente */
+  }
 `;
+

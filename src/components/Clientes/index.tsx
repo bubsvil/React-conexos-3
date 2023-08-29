@@ -1,6 +1,5 @@
 
 import Button_detalhes from "../Button_detalhes";
-import Button from "../Button_Pedido";
 import { Link } from "react-router-dom"
 import { TituloCliente, ClienteStyled, Div } from "./style";
 import ButtonModal from "../ButtonModal";

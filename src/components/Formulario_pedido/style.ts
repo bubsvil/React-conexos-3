@@ -17,7 +17,7 @@ export const Form  = styled.form`
     font-weight: bold; 
     display: flex; 
     flex-direction: column;   
-    margin: 20px 0px 0px 20px;
+    margin: 15px 0px 0px 20px;
     } 
 
     input { 

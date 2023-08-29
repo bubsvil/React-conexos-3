@@ -61,7 +61,7 @@ export default function Formulario_pedido(){
         /> 
 
 <div>
-         <Link to="/detalhes">
+         <Link to="/servico">
             <Button text="voltar" />
           </Link> 
 
