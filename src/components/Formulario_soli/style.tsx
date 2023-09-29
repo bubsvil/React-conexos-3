@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const Form_soli = styled.form`
     background-color: #fff;
-    color: black;
+    color: #276328;
     width: 400px;
-    height: 450px;  
+    height: 430px;  
     margin: 18px;
-    border-radius: 10px; 
+    border-radius: 15px; 
     display: flex; 
     flex-direction: column;   
     justify-items: center; 
@@ -16,17 +16,30 @@ export const Form_soli = styled.form`
     font-weight: bold; 
     display: flex; 
     flex-direction: column;   
-    margin: 15px 0px 0px 20px;
+    margin-left: 25px;
+    margin-top: 5px; 
+    margin-bottom: 5px;
     } 
 
     input { 
-      width: 350px; 
-      margin: 10px 20px 5px 20px;
+      width: 350px;  
+      height: 25px; 
+      margin-left: 25px;
+      margin-top: 5px; 
+      margin-bottom: 5px;
+      border-radius: 5px;  
+      border: 1px solid #000; 
+      
     }
    
     select { 
-      width: 350px; 
-      margin: 10px 20px 5px 20px;
+      width: 350px;  
+      height: 25px; 
+      margin-left: 25px;
+      margin-top: 5px; 
+      margin-bottom: 5px;
+      border-radius: 5px; 
+      border: 1px solid #000;
     }
 
     div {
@@ -40,7 +53,9 @@ export const Form_soli = styled.form`
 background-color: #fff;
 color: #276328;
 padding: 8px 18px;
-margin: 15px 0 0;
+margin-top: 15px; 
+margin: 22px;
+width: 350px; 
 border: 1px solid #276328;
 border-radius: 10px;
 font-family: "Raleway", sans-serif;
@@ -48,9 +63,7 @@ font-weight: 700;
 display: flex;   
 flex-direction: row;
 text-decoration: none; 
-width: 350px; 
 text-align: center; 
-margin: 10px 20px 5px 20px; 
 justify-content: center;
 align-items: center;
 }

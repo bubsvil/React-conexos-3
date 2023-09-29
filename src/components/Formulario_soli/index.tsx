@@ -1,44 +1,122 @@
-import { Form_soli, Container_soli} from "./style";
+import { Form_soli, Container_soli } from "./style";
+import { useForm, Controller } from 'react-hook-form';
+import axios from 'axios';
 
-export default function Form_solicitacao() {
+interface FormData {
+  nomeCompleto: string;
+  email: string;
+  telefone: string;
+  cpf: string;
+  plano: string;
+  horario: string;
+}
 
-    return (<>
+const planos = ['Bronze', 'Prata', 'Ouro'];
+const horarios = ['8:00 às 12:00', '12:00 às 16:00', '16:00 às 20:00'];
 
-        <Container_soli>
-            <Form_soli>
-                <label for="nome">Nome Completo</label>
-                <input type="text" id="Nome"/>
+const Form_solicitacao: React.FC = () => {
+  const { handleSubmit, control} = useForm<FormData>();
 
-                    <label for="cpf">CPF</label>
-                    <input type="number" id="cpf"/>
+  const onSubmit = async (data: FormData) => {
+    try {
+      // Substitua 'sua_url_de_envio' pela URL do seu endpoint
+      const response = await axios.post('sua_url_de_envio', data);
+      // Lide com a resposta da API (por exemplo, exiba uma mensagem de sucesso)
+      console.log('Resposta da API:', response.data);
+    } catch (error) {
+      // Lide com erros (por exemplo, exiba uma mensagem de erro)
+      console.error('Erro ao enviar dados:', error);
+    }
+  };
 
-                        <label for="Telefone">Telefone para contato</label>
-                        <input type="number" id="telefone"/>
+  return ( 
 
-                            <label for="email">Insira seu Email</label>
-                            <input type="email" id="email"/>
+    <Container_soli>
+       <Form_soli> 
 
-                                <label for="plano">Selecione o plano</label>
-                                <select>
-                                    <option value="1">Bronze</option>
-                                    <option value="2">Prata</option>
-                                    <option value="3">Ouro</option>
-                                </select>
+    <form onSubmit={handleSubmit(onSubmit)}>
+   
+        <label htmlFor="nomeCompleto">Nome Completo:</label>
+        <Controller
+          name="nomeCompleto"
+          control={control}
+          defaultValue=""
+          rules={{ required: 'Campo obrigatório' }}
+          render={({ field }) => <input {...field} />}
+        />
 
-                                <label for="plano">Preferência de horario para
-                                    visita
-                                    técnica</label>
-                                <select>
-                                    <option value="1">8:00 ás 12:00</option>
-                                    <option value="2">12:00 ás 16:00</option>
-                                    <option value="3">16:00 ás 20:00</option>
-                                </select>
+    <label htmlFor="cpf">CPF:</label>
+        <Controller
+          name="cpf"
+          control={control}
+          defaultValue=""
+          rules={{ required: 'Campo obrigatório', pattern: /^\d+$/ }}
+          render={({ field }) => <input {...field} />}
+        />
 
-                                    <button type="button">Contratar</button>
-                            
+<label htmlFor="telefone">Telefone para contato:</label>
+        <Controller
+          name="telefone"
+          control={control}
+          defaultValue=""
+          rules={{ required: 'Campo obrigatório', pattern: /^\d+$/ }}
+          render={({ field }) => <input {...field} />}
+        />
 
-                            </Form_soli>
-                        </Container_soli>
+        <label htmlFor="email">E-mail:</label>
+        <Controller
+          name="email"
+          control={control}
+          defaultValue=""
+          rules={{ required: 'Campo obrigatório' }}
+          render={({ field }) => <input {...field} />}
+        />
+        
+        <label htmlFor="plano">Plano:</label>
+        <Controller
+          name="plano"
+          control={control}
+          defaultValue=""
+          rules={{ required: 'Campo obrigatório' }}
+          render={({ field }) => (
+            <select {...field}>
+              <option value="">Selecione um plano</option>
+              {planos.map((plano) => (
+                <option key={plano} value={plano}>
+                  {plano}
+                </option>
+              ))}
+            </select>
+          )}
+        />
+    
+        <label htmlFor="horario">Selecione horário para visita técnica:</label>
+        <Controller
+          name="horario"
+          control={control}
+          defaultValue=""
+          rules={{ required: 'Campo obrigatório' }}
+          render={({ field }) => (
+            <select {...field}>
+              <option value="">Selecione um horário</option>
+              {horarios.map((horario) => (
+                <option key={horario} value={horario}>
+                  {horario}
+                </option>
+              ))}
+            </select>
+          )}
+        />
+       
+    
+        <button type="submit">Confirmar</button>
+     
+    </form> 
+    </Form_soli>
+        </Container_soli>
+  );
+}; 
 
-                    </>);
-    } 
+
+
+export default Form_solicitacao;
