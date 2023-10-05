@@ -21,7 +21,15 @@ export const Form = styled.form`
   button { 
     width: 100%; 
     color: #276328; 
-    border: 2px solid #276328;
+    border: 2px solid #276328; 
+  background-color: #276328;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 15px 0 0;
+  border: none;
+  border-radius: 5px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
   }
 `;
 
