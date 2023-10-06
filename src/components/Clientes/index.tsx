@@ -3,6 +3,7 @@ import Button_detalhes from "../Button_detalhes";
 import { Link } from "react-router-dom"
 import { TituloCliente, ClienteStyled } from "./style";
 import ButtonModal from "../ButtonModal"; 
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
@@ -26,12 +27,13 @@ function Painel() {
       });
   }, []);
 
-  return (
+  return ( 
+    <table>
     <div className="Painel">
       {error && <p>{error}</p>} 
 
       <TituloCliente> 
-      <table>
+    
         <thead>
           <tr>
             <th>Código de Acesso</th>
@@ -62,9 +64,8 @@ function Painel() {
            
         </tbody> 
         </ClienteStyled>
-      </table>
     </div> 
-  
+    </table>
   );
 }
 
