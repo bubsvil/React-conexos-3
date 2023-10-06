@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import { TituloCliente, ClienteStyled } from "./style";
 import ButtonModal from "../ButtonModal"; 
 import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 function Painel() {
   const [data, setData] = useState([]);
