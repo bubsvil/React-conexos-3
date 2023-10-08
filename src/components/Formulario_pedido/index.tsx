@@ -5,12 +5,12 @@ import ButtonModal from "../ButtonModal";
 import axios from 'axios';
 
 export default function Formulario_pedido(){   
-    const [formData, setFormData] = useState({});
+    const [formData, setFormData] = useState({nome, plano, horario, status });
     const id = 1; // Substitua 1 pelo ID específico que deseja buscar
 
     useEffect(() => {
         // Faça a requisição GET assim que o componente for montado
-        axios.get(`URL_DO_SEU_ENDPOINT_DE_DADOS/${id}`)
+        axios.get(`http://localhost:3000/order/${id}`)
           .then((response) => {
             // Verifique se a resposta foi bem-sucedida
             if (response.status === 200) {
@@ -27,7 +27,7 @@ export default function Formulario_pedido(){
       const handleAtenderSolicitacao = async () => {
         try {
           // Realiza uma requisição PUT para atualizar o status
-          const response = await axios.put('URL_DO_SEU_ENDPOINT', {
+          const response = await axios.put('http://localhost:3000/order/', {
             status: 'Em andamento',
           });
     
@@ -54,19 +54,13 @@ export default function Formulario_pedido(){
         value={formData.nome || ''} 
         readOnly />
       
-        <label>Servico</label>
+        <label>plano</label>
         <input
         type="text"
-        id="servico"
-        value={formData.servico || ''} 
+        id="plano"
+        value={formData.plano || ''} 
         readOnly />
-        
-         <label>Data da contratação</label>
-        <input
-        type="text"
-        id="data" 
-        value={formData.data || ''} 
-        readOnly />
+
 
         <label>Horário sugerido</label>
         <input

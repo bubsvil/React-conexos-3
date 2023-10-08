@@ -1,10 +1,10 @@
-
 import Button_detalhes from "../Button_detalhes";
 import { Link } from "react-router-dom"
 import { TituloCliente, ClienteStyled } from "./style";
 import ButtonModal from "../ButtonModal"; 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import React from "react";
 
 function Painel() {
   const [data, setData] = useState([]);
@@ -38,8 +38,8 @@ function Painel() {
             <th>Código de Acesso</th>
             <th>Nome do Cliente</th>
             <th>Serviço Solicitado</th>
-            <th>Data de Contratação</th>
-            <th>status</th>
+            <th>Horário</th>
+            <th>Status</th>
           </tr>
         </thead> 
         </TituloCliente> 
@@ -47,14 +47,14 @@ function Painel() {
         <tbody>
           {data.map((item, index) => (
             <tr key={index}>
-              <td>{item.codigoAcesso}</td>
-              <td>{item.nomeCliente}</td>
-              <td>{item.servicoSolicitado}</td>
-              <td>{item.dataContratacao}</td>
+              <td>{item.id}</td>
+              <td>{item.nome}</td>
+              <td>{item.plano}</td>
+              <td>{item.horario}</td>
               <td>{item.status}</td>
               <td>
                 <Link to="/detalhe_servico">
-                  <Button_detalhes onClick={fetchData} text="ver detalhes" />
+                  <Button_detalhes/>
                 </Link>
               </td>
               <td>
@@ -116,11 +116,11 @@ export default Painel;
 //                   <Button_detalhes text="ver detalhes" />
 //                 </Link>
 //               </td>
-                // <Div>
-                //     <td>
-                //       <ButtonModal text="atender solicitação" />
-                //     </td>
-                //   </Div>
+//                 <Div>
+//                     <td>
+//                       <ButtonModal text="atender solicitação" />
+//                     </td>
+//                   </Div>
 //             </tr>
 //           </tbody>
 //         ))}

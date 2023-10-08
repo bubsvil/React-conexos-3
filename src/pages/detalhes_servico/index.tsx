@@ -1,6 +1,7 @@
 import Footer from "../../components/Footer";
 import Formulario_pedido from "../../components/Formulario_pedido";
 
+import React from "react";
 import Header from "../../components/Header";
 import TextoPrincipal from "../../components/TextoPrincipal";
 
