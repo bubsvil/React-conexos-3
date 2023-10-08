@@ -5,7 +5,6 @@ import { TituloCliente, ClienteStyled } from "./style";
 import ButtonModal from "../ButtonModal"; 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useState, useEffect } from 'react';
 
 function Painel() {
   const [data, setData] = useState([]);
@@ -13,7 +12,7 @@ function Painel() {
 
   useEffect(() => {
     // Faça a requisição GET assim que o componente for montado
-    axios.get('URL_DO_SEU_ENDPOINT_DE_DADOS')
+    axios.get('http://localhost:3000/order')
       .then((response) => {
         // Verifique se a resposta foi bem-sucedida
         if (response.status === 200) {
@@ -40,6 +39,7 @@ function Painel() {
             <th>Nome do Cliente</th>
             <th>Serviço Solicitado</th>
             <th>Data de Contratação</th>
+            <th>status</th>
           </tr>
         </thead> 
         </TituloCliente> 
@@ -51,6 +51,7 @@ function Painel() {
               <td>{item.nomeCliente}</td>
               <td>{item.servicoSolicitado}</td>
               <td>{item.dataContratacao}</td>
+              <td>{item.status}</td>
               <td>
                 <Link to="/detalhe_servico">
                   <Button_detalhes onClick={fetchData} text="ver detalhes" />
