@@ -7,7 +7,7 @@ const statusContent = document.getElementById('status-content');
 // Evento de clique para abrir o modal
 openModalButton.addEventListener('click', () => {
     // Realize a requisição GET usando Axios para obter o status com base no ID
-    axios.get('URL_DO_SERVIDOR?id=ID_ESPECIFICO')
+    axios.get('http://localhost:3000/order/')
         .then(response => {
             const status = response.data.status; // Suponha que o servidor forneça o status em um campo 'status'
 
