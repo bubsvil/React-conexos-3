@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link /*,useSearchParams*/  } from "react-router-dom";
 import { Form, Container, Div } from "./style";    
 import Button from "../Button_detalhes";  
 import ButtonModal from "../ButtonModal";
 import axios from 'axios';
-import { useEffect, useState } from "react"
+import { useEffect, useState, } from "react"
 
-const id = 7;
+// const [searchParams] = useSearchParams();
+const id = 10
 
 // export default function Formulario_pedido(){   
 //     const [formData, setFormData] = useState({nome, plano, horario, status });

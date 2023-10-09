@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(){
     var cpf = document.getElementById("cpf").value
     var plano = document.getElementById("plano").value
     var horario = document.getElementById("horario").value
-    var status = "INICIAL"
+    var status = "Pendente"
 
     // Crie um objeto com os dados do formulário
     var formData = {

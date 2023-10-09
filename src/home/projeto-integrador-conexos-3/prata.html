@@ -76,25 +76,23 @@
 
         <!-- Fomúlario Contratação -->
         <div class="form-container">
-
             <div class="card" style="width: 40rem;">
                 <div class="card-body my-2">
-                    <form>
+                    <form id="formulario">
                         <h1 class="Titulo-form-plano my-2">Contratação do plano</h1>
                         <div class="card-text">
                             <div class="col-5">
                                 <div class="mb-3">
-                                    <label for="nome" class="form-label col-form-label-sm my-3">Nome Completo</label>
-                                    <input type="nome" class="form-control" id="Nome">
+                                    <label for="Nome" class="form-label col-form-label-sm my-3">Nome Completo</label>
+                                    <input type="text" class="form-control" id="nome">
                                 </div>
                                 <div class="mb-3">
                                     <label for="cpf" class="form-label col-form-label-sm">CPF</label>
-                                    <input type="cpf" class="form-control" id="cpf">
+                                    <input type="text" class="form-control" id="cpf">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="Telefone" class="form-label col-form-label-sm">Telefone para
-                                        contato</label>
-                                    <input type="telefone" class="form-control" id="telefone">
+                                    <label for="telefone" class="form-label col-form-label-sm">Telefone para contato</label>
+                                    <input type="tel" class="form-control" id="telefone">
                                 </div>
                                 <div class="mb-3">
                                     <label for="email" class="form-label col-form-label-sm">Insira seu Email</label>
@@ -102,33 +100,28 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="plano" class="form-label col-form-label-sm">Selecione o plano</label>
-                                    <select class="form-select">
-                                        <option value="1">Bronze</option>
-                                        <option value="2">Prata</option>
-                                        <option value="3">Ouro</option>
+                                    <select class="form-select" id="plano">
+                                        <option value="Prata">Prata</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="plano" class="form-label col-form-label-sm">Preferência de horario para
-                                        visita
-                                        técnica</label>
-                                    <select class="form-select">
-                                        <option value="1">8:00 ás 12:00</option>
-                                        <option value="2">12:00 ás 16:00</option>
-                                        <option value="3">16:00 ás 20:00</option>
+                                    <label for="horario" class="form-label col-form-label-sm">Preferência de horario para visita técnica</label>
+                                    <select class="form-select" id="horario">
+                                        <option value="8:00 as 12:00">8:00 ás 12:00</option>
+                                        <option value="12:00 as 16:00">12:00 ás 16:00</option>
+                                        <option value="16:00 as 20:00">16:00 ás 20:00</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
                                     <div class="d-grid gap">
-                                        <button class="btn btn-success border-0" type="button">Contratar</button>
+                                        <button id="submitbtn" class="btn btn-success border-0" type="submit">Contratar</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </form>
                 </div>
-                </form>
             </div>
-        </div>
         </div>
 
     </main>

@@ -21,7 +21,7 @@ export default function Routes() {
       element: <Servicos />
     },
     {
-      path: "/detalhe_servico",
+      path: "/detalhe_servico/:id",
       element: <Detalhes_Servico />
     },
     {
