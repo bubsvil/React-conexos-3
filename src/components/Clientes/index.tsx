@@ -26,6 +26,25 @@ function Painel() {
       });
   }, []);
 
+  const handleAtenderSolicitacao = async () => {
+    try {
+      // Realiza uma requisição PUT para atualizar o status
+      const response = await axios.put(`http://localhost:3000/order/${id}`, {
+        status: 'Em andamento',
+      });
+
+      // Verifica se a resposta foi bem-sucedida
+      if (response.status === 200) {
+        setStatus('Em andamento'); // Atualiza o estado local com o novo status
+        console.log('Status atualizado com sucesso para "Em andamento".');
+      } else {
+        setError('Não foi possível atualizar o status.');
+      }
+    } catch (err) {
+      setError('Ocorreu um erro ao atualizar o status.');
+    }
+  };
+
   return ( 
     <table>
     <div className="Painel">
