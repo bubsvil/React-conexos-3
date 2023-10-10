@@ -52,10 +52,10 @@ export const Div = styled.div`
 
 button {
 background-color: #fff;
-color: #276328;
+color: #275B63;
 padding: 8px 18px;
 margin: 15px 0 0;
-border: 2px solid #276328;
+border: 2px solid #275B63;
 border-radius: 10px;
 font-family: "Raleway", sans-serif;
 font-weight: 700; 

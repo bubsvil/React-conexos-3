@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FooterStyled = styled.footer`
-  background-color: #79B07A;
+  background-color: #9FC9B8;
 
   p {
     color: black;

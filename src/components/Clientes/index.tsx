@@ -1,8 +1,7 @@
 
 import Button_detalhes from "../Button_detalhes";
 import { Link } from "react-router-dom"
-import { TituloCliente, ClienteStyled } from "./style";
-import ButtonModal from "../ButtonModal"; 
+import { Div } from "./style";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -26,45 +25,41 @@ function Painel() {
       });
   }, []);
 
-  return ( 
+  return (  
+    <Div>
     <table>
     <div className="Painel">
       {error && <p>{error}</p>} 
-
-      <TituloCliente> 
     
         <thead>
           <tr>
             <th>Código de Acesso</th>
             <th>Nome do Cliente</th>
             <th>Serviço Solicitado</th>
-            <th>Data de Contratação</th>
+            <th>Horario</th> 
+            <th>Detalhes</th>
           </tr>
         </thead> 
-        </TituloCliente> 
-        <ClienteStyled>
+       
         <tbody>
           {data.map((item, index) => (
             <tr key={index}>
               <td>{item.codigoAcesso}</td>
               <td>{item.nomeCliente}</td>
               <td>{item.servicoSolicitado}</td>
-              <td>{item.dataContratacao}</td>
+              <td>{item.datahorario}</td>
               <td>
                 <Link to="/detalhe_servico">
-                  <Button_detalhes onClick={fetchData} text="ver detalhes" />
+                  <Button_detalhes text="ver detalhes" />
                 </Link>
-              </td>
-              <td>
-                <ButtonModal text="atender solicitação" />
-              </td>   
+              </td>  
             </tr>  
           ))} 
            
         </tbody> 
-        </ClienteStyled>
     </div> 
-    </table>
+    </table> 
+    </Div>
   );
 }
 

@@ -7,7 +7,7 @@ export const Container = styled.div`
 
   h1 {
     text-transform: uppercase;
-    color: #276328 ;
+    color: #275B63;
     font-size: 40px;
   }
 
