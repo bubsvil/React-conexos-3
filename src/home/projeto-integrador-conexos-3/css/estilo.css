@@ -154,12 +154,12 @@ form .Titulo-form-plano {
 }
 
 
-.card-soli p {
+.card-soli input {
     width: 100%;
-    border: 1px solid #212121;
-    border-radius: 7px;
-    padding: 10px;
-    margin: 5px 0;
+    border: 0.1px solid #212121;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 13px 0;
 }
 
 .card-soli a {

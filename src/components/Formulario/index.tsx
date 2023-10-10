@@ -1,10 +1,14 @@
+//parte patrick
+
+import React from "react";
 import { Form, Container } from "./style";
 import { useState, FormEventHandler } from "react";
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 export default function Formulario() {
-  const [codigo, setCodigo] = useState("");
-  const [senha, setSenha] = useState(""); 
+  const [codigoAcesso, setCodigo] = useState("");
+  const [password, setSenha] = useState(""); 
   const [error, setError] = useState('');
 
   const logar: FormEventHandler<HTMLFormElement> = (evento) => {
@@ -13,15 +17,15 @@ export default function Formulario() {
     // pra ver o que vem no parâmetro evento
     // console.log(evento);
     // pra ver o valor de cada campo do formulário
-    console.log(codigo);
-    console.log(senha);
+    console.log(codigoAcesso);
+    console.log(password);
   }; 
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('URL_DO_SEU_ENDPOINT_DE_LOGIN', {
-        codigo: codigo,
-        senha: senha,
+      const response = await axios.post('http://localhost:3000/auth', {
+        codigoAcesso: codigoAcesso,
+        password: password
       });
 
       // Verifique a resposta do servidor e tome ações apropriadas
@@ -44,20 +48,20 @@ export default function Formulario() {
           <label>código de acesso</label>
           <input
             type="text"
-            value={codigo}
+            value={codigoAcesso}
             onChange={(e) => setCodigo(e.target.value)}
           />
 
           <label>senha</label>
           <input
             type="password"
-            value={senha}
+            value={password}
             onChange={(e) => setSenha(e.target.value)}
           />
-
+           <Link to="/servico">
           <button onClick={handleLogin}>entrar</button>
+          </Link>
           {error && <p>{error}</p>} 
-          
         </Form>
       </Container> 
 
